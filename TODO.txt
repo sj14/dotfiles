@@ -1,0 +1,2 @@
+# GOBIN in .zshrc
+export PATH=$PATH:/$HOME/go/bin
