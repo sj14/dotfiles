@@ -1,2 +1,7 @@
 # GOBIN in .zshrc
 export PATH=$PATH:/$HOME/go/bin
+
+# remember ssh password (~/.ssh/config)
+Host *
+   AddKeysToAgent yes
+   UseKeychain yes     
