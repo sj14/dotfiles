@@ -5,3 +5,8 @@ export PATH=$PATH:/$HOME/go/bin
 Host *
    AddKeysToAgent yes
    UseKeychain yes     
+
+# direnv
+brew install direnv
+# add to .zshrc:
+eval "$(direnv hook zsh)"
