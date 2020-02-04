@@ -10,3 +10,7 @@ Host *
 brew install direnv
 # add to .zshrc:
 eval "$(direnv hook zsh)"
+
+# fzf
+brew install fzf
+$(brew --prefix)/opt/fzf/install
