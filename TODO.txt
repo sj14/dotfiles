@@ -1,3 +1,5 @@
+# TODO: oh my zsh
+
 # GOBIN in .zshrc
 export PATH=$PATH:/$HOME/go/bin
 
@@ -14,3 +16,10 @@ eval "$(direnv hook zsh)"
 # fzf
 brew install fzf
 $(brew --prefix)/opt/fzf/install
+
+# hosts (https://github.com/StevenBlack/hosts)
+git clone https://github.com/StevenBlack/hosts.git
+cd hosts
+pip3 install --user -r requirements.txt
+python3 testUpdateHostsFile.py
+python3 updateHostsFile.py --auto --replace --backup --flush-dns-cache
