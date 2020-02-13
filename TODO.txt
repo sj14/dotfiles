@@ -41,3 +41,6 @@ cd hosts
 pip3 install --user -r requirements.txt
 python3 testUpdateHostsFile.py
 python3 updateHostsFile.py --auto --replace --backup --flush-dns-cache
+
+# grep
+brew install grep
