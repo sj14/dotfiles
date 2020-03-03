@@ -17,6 +17,8 @@ setopt INC_APPEND_HISTORY        # Write to the history file immediately, not wh
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt BANG_HIST                 # Treat the '!' character specially during expansion.
 
+# commands that start with a space are not saved in the history
+HISTCONTROL=ignorespace
 
 # GOBIN in .zshrc
 export PATH=$PATH:/$HOME/go/bin
