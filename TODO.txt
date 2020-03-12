@@ -35,7 +35,7 @@ eval "$(direnv hook zsh)"
 
 # fzf
 brew install fzf
-$(brew --prefix)/opt/fzf/install
+/usr/local/opt/fzf/install
 
 # git
 git config --global user.name "Simon Jürgensmeyer"
