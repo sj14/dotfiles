@@ -37,6 +37,10 @@ eval "$(direnv hook zsh)"
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
+# git
+git config --global user.name "Simon Jürgensmeyer"
+git config --global user.email "simon.juergensmeyer@gmail.com"
+
 # hosts (https://github.com/StevenBlack/hosts)
 git clone https://github.com/StevenBlack/hosts.git
 cd hosts
