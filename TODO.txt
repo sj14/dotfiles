@@ -51,3 +51,6 @@ python3 updateHostsFile.py --auto --replace --backup --flush-dns-cache
 # kubectl zsh autocomplete
 source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell
 echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc # add autocomplete permanently to your zsh shell
+
+# apps
+brew cask install maccy macpass numi
