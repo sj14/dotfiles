@@ -54,3 +54,7 @@ echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~
 
 # apps
 brew cask install maccy macpass numi background-music menumeters rectangle gpg-suite-no-mail
+
+# TODO: git commit signing with gpg
+git config --global user.signingkey !!!KEYID!!!
+git config --global commit.gpgSign true
