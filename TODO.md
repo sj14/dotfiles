@@ -1,5 +1,6 @@
 # TODO: oh my zsh
 
+```bash
 # no dups in zsh history 
 # https://github.com/mattjj/my-oh-my-zsh/blob/master/history.zsh
 # https://leetschau.github.io/remove-duplicate-zsh-history.html
@@ -61,3 +62,4 @@ git config --global commit.gpgSign true
 
 # Mouse behaviour
 # Install MouseFix: https://mousefix.org/ or SensibleSiteButtons: https://sensible-side-buttons.archagon.net/
+```
