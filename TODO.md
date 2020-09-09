@@ -60,6 +60,8 @@ brew cask install maccy macpass numi background-music menumeters rectangle gpg-s
 git config --global user.signingkey !!!KEYID!!!
 git config --global commit.gpgSign true
 
+git config --global pull.rebase true
+
 # Mouse behaviour
 # Install MouseFix: https://mousefix.org/ or SensibleSiteButtons: https://sensible-side-buttons.archagon.net/
 ```
