@@ -61,6 +61,7 @@ git config --global user.signingkey !!!KEYID!!!
 git config --global commit.gpgSign true
 
 git config --global pull.rebase true
+git config --global rebase.autoStash true
 
 # Mouse behaviour
 # Install MouseFix: https://mousefix.org/ or SensibleSiteButtons: https://sensible-side-buttons.archagon.net/
