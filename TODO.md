@@ -65,10 +65,10 @@ git config --global rebase.autoStash true
 
 # Mouse behaviour
 # Install MouseFix: https://mousefix.org/ or SensibleSiteButtons: https://sensible-side-buttons.archagon.net/
-```
 
 # .vimrc
 set number
 syntax on
 set ruler
 filetype indent plugin on
+```
