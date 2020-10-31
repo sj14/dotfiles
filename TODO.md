@@ -71,4 +71,7 @@ set number
 syntax on
 set ruler
 filetype indent plugin on
+
+# Add to ublock origin filter list of https://www.privacy-handbuch.de/handbuch_21g.htm
 ```
+
