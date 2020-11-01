@@ -1,10 +1,16 @@
-# TODO: oh my zsh
+# TODO
 
 ```bash
-# no dups in zsh history 
-# https://github.com/mattjj/my-oh-my-zsh/blob/master/history.zsh
-# https://leetschau.github.io/remove-duplicate-zsh-history.html
-# ~/.zshrc
+# oh my zsh
+
+install syntax-hightlight
+https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh
+
+ no dups in zsh history 
+ https://github.com/mattjj/my-oh-my-zsh/blob/master/history.zsh
+ https://leetschau.github.io/remove-duplicate-zsh-history.html
+
+~/.zshrc
 setopt EXTENDED_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
