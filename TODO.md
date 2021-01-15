@@ -73,6 +73,11 @@ git config --global pull.ff only
 # Mouse behaviour
 # Install MouseFix: https://mousefix.org/ or SensibleSiteButtons: https://sensible-side-buttons.archagon.net/
 
+# Disable dock delay
+defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+# (enable again: defaults delete com.apple.Dock autohide-delay && killall Dock)
+
+
 # .vimrc
 set number
 syntax on
