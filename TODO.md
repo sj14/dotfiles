@@ -60,7 +60,7 @@ source <(kubectl completion zsh)  # setup autocomplete in zsh into the current s
 echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc # add autocomplete permanently to your zsh shell
 
 # apps
-brew cask install maccy macpass numi background-music menumeters rectangle gpg-suite-no-mail
+brew install maccy macpass numi background-music menumeters rectangle gpg-suite-no-mail dteoh-devdocs
 
 # TODO: git commit signing with gpg
 git config --global user.signingkey !!!KEYID!!!
