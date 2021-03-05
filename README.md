@@ -31,9 +31,9 @@ HISTCONTROL=ignorespace
 export PATH=$PATH:/$HOME/go/bin
 
 # add time
-PROMPT='%{$fg[yellow]%} %D{%H:%M:%S} '$PROMPT
+PROMPT='%{$fg[yellow]%} %D{%H:%M} '$PROMPT
 
-TMOUT=1
+TMOUT=10
 
 TRAPALRM() {
     zle reset-prompt
