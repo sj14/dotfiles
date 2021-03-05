@@ -33,7 +33,7 @@ export PATH=$PATH:/$HOME/go/bin
 # add time
 PROMPT='%{$fg[yellow]%} %D{%H:%M} '$PROMPT
 
-TMOUT=10
+TMOUT=60 # seconds of updating
 
 TRAPALRM() {
     zle reset-prompt
