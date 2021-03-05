@@ -32,6 +32,12 @@ export PATH=$PATH:/$HOME/go/bin
 
 # add time
 PROMPT='%{$fg[yellow]%} %D{%L:%M:%S} '$PROMPT
+
+TMOUT=1
+
+TRAPALRM() {
+    zle reset-prompt
+}
 ```
 
 # remember ssh password (~/.ssh/config)
