@@ -31,7 +31,7 @@ HISTCONTROL=ignorespace
 export PATH=$PATH:/$HOME/go/bin
 
 # add time
-PROMPT='%{$fg[yellow]%} %D{%L:%M:%S} '$PROMPT
+PROMPT='%{$fg[yellow]%} %D{%H:%M:%S} '$PROMPT
 
 TMOUT=1
 
