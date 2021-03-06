@@ -88,6 +88,9 @@ git config --global commit.gpgSign true
 #git config --global pull.rebase true
 git config --global rebase.autoStash true
 git config --global pull.ff only
+
+git config --global merge.conflictstyle diff3
+git config --global rerere.enabled true
 ```
 
 # Mouse behaviour
