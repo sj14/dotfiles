@@ -1,0 +1,6 @@
+[[commands]]
+name = "fzf"
+exec = [
+    "brew install fzf",
+    "/usr/local/opt/fzf/install"
+]

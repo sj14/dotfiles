@@ -1,0 +1,17 @@
+[[commands]]
+name = "fzf"
+exec = [
+"""
+brew install \ 
+    maccy \
+    macpass \ 
+    numi \ 
+    menumeters \ 
+    rectangle \ 
+    gpg-suite-no-mail \ 
+    dteoh-devdocs \
+    mouse-fix
+""",
+
+#    background-music 
+]

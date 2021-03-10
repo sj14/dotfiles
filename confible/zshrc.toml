@@ -1,0 +1,62 @@
+# zsh stuff
+[[commands]]
+name = "oh-my-zsh"
+exec = [
+    # 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',
+    # "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting"
+]
+
+[[config]]
+name = "oh-my-zsh"
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+plugins=(git zsh-syntax-highlighting)
+"""
+
+[[commands]]
+name = "direnv"
+exec = [
+    "brew install direnv"
+]
+
+[[config]]
+name = "direnv"
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+eval "$(direnv hook zsh)"
+"""
+
+[[config]]
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+setopt EXTENDED_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_BEEP
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+
+# commands that start with a space are not saved in the history
+HISTCONTROL=ignorespace
+
+# GOBIN in .zshrc
+export PATH=$PATH:/$HOME/go/bin
+
+# add time
+PROMPT='%{$fg[yellow]%} %D{%H:%M} '$PROMPT
+
+TMOUT=60 # seconds of updating
+
+TRAPALRM() {
+    zle reset-prompt
+}
+"""
