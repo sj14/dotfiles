@@ -1,6 +1,6 @@
 [[config]]
 path = "~/.vimrc"
-comment_symbol = "#"
+comment_symbol = "\""
 append = """
 set number
 syntax on
