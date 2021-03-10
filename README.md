@@ -1,14 +1,18 @@
-# confible
+# Dotfiles
+
+## confible
+
+see [confible](https://github.com/sj14/confible)
 
 ```bash
 confible ./confible/*.toml
 ```
 
-# oh my zsh
+## oh my zsh
 
 [syntax-hightlight](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
 
-# kubectl zsh autocomplete
+## kubectl zsh autocomplete
 
 ```bash
 source <(kubectl completion zsh)  # setup autocomplete in zsh into the current shell

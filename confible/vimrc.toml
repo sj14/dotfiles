@@ -2,8 +2,8 @@
 path = "~/.vimrc"
 comment_symbol = "#"
 append = """
-   set number
-   syntax on
-   set ruler
-   filetype indent plugin on
+set number
+syntax on
+set ruler
+filetype indent plugin on
 """

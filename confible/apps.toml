@@ -2,13 +2,13 @@
 name = "fzf"
 exec = [
 """
-brew install \ 
+brew install \
     maccy \
-    macpass \ 
-    numi \ 
-    menumeters \ 
-    rectangle \ 
-    gpg-suite-no-mail \ 
+    macpass \
+    numi \
+    menumeters \
+    rectangle \
+    gpg-suite-no-mail \
     dteoh-devdocs \
     mouse-fix
 """,
