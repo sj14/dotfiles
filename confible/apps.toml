@@ -12,6 +12,7 @@ brew install \
     dteoh-devdocs \
     mouse-fix
 """,
-
-#    background-music 
 ]
+
+# background-music 
+# sensiblesidebuttons
