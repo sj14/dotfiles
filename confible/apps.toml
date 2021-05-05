@@ -1,5 +1,5 @@
 [[commands]]
-name = "fzf"
+name = "apps"
 exec = [
 """
 brew install \
