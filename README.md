@@ -8,10 +8,6 @@ see [confible](https://github.com/sj14/confible)
 confible ./confible/*.toml
 ```
 
-## oh my zsh
-
-[syntax-hightlight](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md#oh-my-zsh)
-
 ## kubectl zsh autocomplete
 
 ```bash
