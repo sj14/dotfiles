@@ -3,6 +3,7 @@ name = "apps"
 exec = [
 """
 brew install \
+    iterm2 \
     maccy \
     macpass \
     numi \
