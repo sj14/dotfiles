@@ -2,5 +2,5 @@
 name = "fzf"
 exec = [
     "brew install fzf",
-    "/usr/local/opt/fzf/install"
+    "/opt/homebrew/opt/fzf/install --all"
 ]
