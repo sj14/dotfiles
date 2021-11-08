@@ -4,5 +4,6 @@ comment_symbol = "#"
 append = """
 Host *
    AddKeysToAgent yes
+   IgnoreUnknown UseKeychain
    UseKeychain yes     
 """
