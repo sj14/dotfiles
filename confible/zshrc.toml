@@ -56,6 +56,9 @@ HISTCONTROL=ignorespace
 # GOBIN in .zshrc
 export PATH=$PATH:/$HOME/go/bin
 
+# Homebrew Binaries etc
+export PATH=/opt/homebrew/bin:$HOME/bin:/usr/local/bin:$PATH
+
 # add time
 PROMPT='%{$fg[yellow]%} %D{%H:%M} '$PROMPT
 
