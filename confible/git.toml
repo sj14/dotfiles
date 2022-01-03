@@ -2,11 +2,12 @@
 [[commands]]
 name = "git"
 exec = [
-    "git config --global user.name \"Simon Jürgensmeyer\"",
-    "git config --global user.email \"simon.juergensmeyer@gmail.com\"",
+    "git config --global user.name 'Simon Jürgensmeyer'",
+    "git config --global user.email 'simon.juergensmeyer@gmail.com'",
 
     # git config --global user.signingkey !!!KEYID!!!
     "git config --global commit.gpgSign true",
+    "git config --global tag.gpgSign true",
 
     # "git config --global pull.ff only",
     # "git config --global pull.rebase true",
