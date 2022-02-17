@@ -1,9 +1,13 @@
-[[config]]
-path = "~/.ssh/config"
-comment_symbol = "#"
-append = """
-Host *
-   AddKeysToAgent yes
-   IgnoreUnknown UseKeychain
-   UseKeychain yes     
-"""
+# ****************
+# !Use secretive!
+# ****************
+
+#[[config]]
+#path = "~/.ssh/config"
+#comment_symbol = "#"
+#append = """
+#Host *
+#   AddKeysToAgent yes
+#   IgnoreUnknown UseKeychain
+#   UseKeychain yes     
+#"""
