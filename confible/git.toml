@@ -2,22 +2,34 @@
 [[commands]]
 name = "git"
 exec = [
+    # generic
     "git config --global init.defaultBranch main",
-
+    
+    # personal info
     "git config --global user.name 'Simon Jürgensmeyer'",
     "git config --global user.email 'simon.juergensmeyer@gmail.com'",
-
-    # git config --global user.signingkey !!!KEYID!!!
+    
+    # signing
+    "git config --global gpg.format ssh",
+    "git config --global user.signingKey <PUBLIC_KEY_PATH_AS_SHOWN_IN_SECRETIVE>",
     "git config --global commit.gpgSign true",
     "git config --global tag.gpgSign true",
 
-    # "git config --global pull.ff only",
-    # "git config --global pull.rebase true",
+    # rebase etc.
     "git config --global rebase.autoStash true",
-
     "git config --global merge.conflictstyle diff3",
     "git config --global rerere.enabled true",
+    # "git config --global pull.ff only",
+    # "git config --global pull.rebase true",
 ]
+
+# needed for the Secretive app to work with the ssh pub key signing
+[[config]]
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+export SSH_AUTH_SOCK='/Users/tpSimon/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh'
+"""
 
 [[config]]
 path = "~/.config/git/ignore"
@@ -25,3 +37,7 @@ comment_symbol = "#"
 append = """
 .DS_Store
 """
+
+
+
+
