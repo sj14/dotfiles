@@ -1,3 +1,5 @@
+id = "zshrc"
+
 # zsh stuff
 [[commands]]
 name = "oh-my-zsh"

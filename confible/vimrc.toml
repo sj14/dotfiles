@@ -1,3 +1,5 @@
+id = "vimrc"
+
 [[config]]
 path = "~/.vimrc"
 comment_symbol = "\""

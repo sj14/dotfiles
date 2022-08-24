@@ -1,3 +1,5 @@
+id = "apps"
+
 [[commands]]
 name = "apps"
 exec = [

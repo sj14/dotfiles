@@ -1,3 +1,5 @@
+id = "fzf"
+
 [[commands]]
 name = "fzf"
 exec = [
