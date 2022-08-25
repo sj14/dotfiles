@@ -14,8 +14,7 @@ brew install \
     gpg-suite-no-mail \
     dteoh-devdocs \
     mouse-fix \
-    shellcheck \
-    secretive
+    shellcheck
 """,
 ]
 

@@ -24,14 +24,6 @@ exec = [
     # "git config --global pull.rebase true",
 ]
 
-# needed for the Secretive app to work with the ssh pub key signing
-[[config]]
-path = "~/.zshrc"
-comment_symbol = "#"
-append = """
-export SSH_AUTH_SOCK='/Users/tpSimon/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh'
-"""
-
 [[config]]
 path = "~/.config/git/ignore"
 comment_symbol = "#"
