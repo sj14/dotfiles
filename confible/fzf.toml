@@ -2,7 +2,4 @@ id = "fzf"
 
 [[commands]]
 name = "fzf"
-exec = [
-    "brew install fzf",
-    "/opt/homebrew/opt/fzf/install --all"
-]
+exec = ["brew install fzf", "/usr/local/opt/fzf/install --all"]

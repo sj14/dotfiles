@@ -5,11 +5,11 @@ name = "git"
 exec = [
     # generic
     "git config --global init.defaultBranch main",
-    
+
     # personal info
     "git config --global user.name 'Simon Jürgensmeyer'",
     "git config --global user.email 'simon.juergensmeyer@gmail.com'",
-    
+
     # signing
     "git config --global gpg.format ssh",
     "git config --global user.signingKey <PUBLIC_KEY_PATH_AS_SHOWN_IN_SECRETIVE>",
@@ -30,7 +30,3 @@ comment_symbol = "#"
 append = """
 .DS_Store
 """
-
-
-
-

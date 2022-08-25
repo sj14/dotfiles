@@ -4,14 +4,12 @@ id = "zshrc"
 [[commands]]
 name = "oh-my-zsh"
 exec = [
-    # 'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',
+    'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',
 ]
 
 [[commands]]
 name = "zsh-syntax-highlighting"
-exec = [
-    "brew install zsh-syntax-highlighting"
-]
+exec = ["brew install zsh-syntax-highlighting"]
 
 [[config]]
 name = "zsh-syntax-highlighting"
@@ -19,20 +17,6 @@ path = "~/.zshrc"
 comment_symbol = "#"
 append = """
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-"""
-
-[[commands]]
-name = "direnv"
-exec = [
-    "brew install direnv"
-]
-
-[[config]]
-name = "direnv"
-path = "~/.zshrc"
-comment_symbol = "#"
-append = """
-eval "$(direnv hook zsh)"
 """
 
 [[config]]

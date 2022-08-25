@@ -2,8 +2,7 @@ id = "apps"
 
 [[commands]]
 name = "apps"
-exec = [
-"""
+exec = ["""
 brew install \
     iterm2 \
     maccy \
@@ -11,12 +10,11 @@ brew install \
     numi \
     menumeters \
     rectangle \
-    gpg-suite-no-mail \
-    dteoh-devdocs \
     mouse-fix \
     shellcheck
-""",
-]
+"""]
 
+# dteoh-devdocs
+# gpg-suite-no-mail
 # background-music 
 # sensiblesidebuttons

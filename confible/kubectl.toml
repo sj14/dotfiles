@@ -1,0 +1,13 @@
+id = "kubectl"
+
+[[commands]]
+name = "kubectl"
+exec = ["brew install kubernetes-cli"]
+
+[[config]]
+name = "kubectl"
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+source <(kubectl completion zsh)
+"""
