@@ -1,7 +1,6 @@
 id = "git"
 
 [[commands]]
-name = "git"
 exec = [
     # generic
     "git config --global init.defaultBranch main",

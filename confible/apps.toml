@@ -1,7 +1,6 @@
 id = "apps"
 
 [[commands]]
-name = "apps"
 exec = ["""
 brew install \
     iterm2 \

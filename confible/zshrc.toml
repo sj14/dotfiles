@@ -1,18 +1,17 @@
 id = "zshrc"
 
-# zsh stuff
+# oh-my-zsh
 [[commands]]
-name = "oh-my-zsh"
 exec = [
     'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',
 ]
 
+# zsh-syntax-highlighting
 [[commands]]
-name = "zsh-syntax-highlighting"
 exec = ["brew install zsh-syntax-highlighting"]
 
+# zsh-syntax-highlighting
 [[config]]
-name = "zsh-syntax-highlighting"
 path = "~/.zshrc"
 comment_symbol = "#"
 append = """

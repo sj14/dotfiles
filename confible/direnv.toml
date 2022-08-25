@@ -1,11 +1,9 @@
 id = "direnv"
 
 [[commands]]
-name = "direnv"
 exec = ["brew install direnv"]
 
 [[config]]
-name = "direnv"
 path = "~/.zshrc"
 comment_symbol = "#"
 append = """
