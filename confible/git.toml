@@ -1,27 +1,35 @@
 id = "git"
 
-[[commands]]
-exec = [
-    # generic
-    "git config --global init.defaultBranch main",
-
-    # personal info
-    "git config --global user.name 'Simon Jürgensmeyer'",
-    "git config --global user.email 'simon.juergensmeyer@gmail.com'",
-
-    # signing
-    "git config --global gpg.format ssh",
-    "git config --global user.signingKey <PUBLIC_KEY_PATH_AS_SHOWN_IN_SECRETIVE>",
-    "git config --global commit.gpgSign true",
-    "git config --global tag.gpgSign true",
-
-    # rebase etc.
-    "git config --global rebase.autoStash true",
-    "git config --global merge.conflictstyle diff3",
-    "git config --global rerere.enabled true",
-    # "git config --global pull.ff only",
-    # "git config --global pull.rebase true",
+[[variables]]
+input = [
+    ["SSH_PUB_KEY_PATH", "Path to your public SSH key as shown in Secretive"],
 ]
+
+[[config]]
+path = "~/.gitconfig"
+comment_symbol = "#"
+append = """
+[user]
+	name = Simon Jürgensmeyer
+	email = simon.juergensmeyer@gmail.com
+	signingKey = {{ .Var.SSH_PUB_KEY_PATH }}
+[commit]
+	gpgSign = true
+[merge]
+	conflictstyle = diff3
+[rerere]
+	enabled = true
+[rebase]
+	autoStash = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
+[gpg]
+	format = ssh
+[tag]
+	gpgSign = true
+"""
 
 [[config]]
 path = "~/.config/git/ignore"
