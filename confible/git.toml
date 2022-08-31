@@ -2,7 +2,7 @@ id = "git"
 
 [[variables]]
 input = [
-    ["SSH_PUB_KEY_PATH", "Path to your public SSH key as shown in Secretive"],
+	{ var = "SSH_PUB_KEY_PATH", prompt = "Path to your public SSH key as shown in Secretive" },
 ]
 
 [[config]]
