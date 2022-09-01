@@ -3,6 +3,7 @@ id = "git"
 [[variables]]
 input = [
 	{ var = "SSH_PUB_KEY_PATH", prompt = "Path to your public SSH key as shown in Secretive" },
+	{ var = "EMAIL", prompt = "Email to use for git commits (e.g. work or personal address)" },
 ]
 
 [[config]]
@@ -11,7 +12,7 @@ comment_symbol = "#"
 append = """
 [user]
 	name = Simon Jürgensmeyer
-	email = simon.juergensmeyer@gmail.com
+	email = {{ .Var.EMAIL }}
 	signingKey = {{ .Var.SSH_PUB_KEY_PATH }}
 [commit]
 	gpgSign = true
