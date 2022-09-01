@@ -37,4 +37,5 @@ path = "~/.config/git/ignore"
 comment_symbol = "#"
 append = """
 .DS_Store
+.vscode/
 """
