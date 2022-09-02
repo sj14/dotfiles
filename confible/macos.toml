@@ -1,0 +1,25 @@
+id = "macos"
+
+# apps
+[[commands]]
+exec = ["""
+brew install --force \
+    iterm2 \
+    maccy \
+    macpass \
+    numi \
+    menumeters \
+    rectangle \
+    mouse-fix \
+    shellcheck
+"""]
+# dteoh-devdocs
+# gpg-suite-no-mail
+# background-music 
+# sensiblesidebuttons
+
+
+# settings
+[[commands]]
+exec = ["defaults write com.apple.Dock autohide-delay -float 0", "killall Dock"]
+# (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)

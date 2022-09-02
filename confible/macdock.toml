@@ -1,6 +1,0 @@
-id = "dock"
-
-[[commands]]
-exec = ["defaults write com.apple.Dock autohide-delay -float 0", "killall Dock"]
-
-# (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)
