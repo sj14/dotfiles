@@ -3,7 +3,7 @@ id = "macos"
 # apps
 [[commands]]
 exec = ["""
-brew install --force \
+brew install \
     iterm2 \
     maccy \
     macpass \
