@@ -1,4 +1,7 @@
 id = "fzf"
 
 [[commands]]
-exec = ["brew install fzf", "/usr/local/opt/fzf/install --all"]
+exec = [
+    "brew install fzf",
+    "/usr/local/opt/fzf/install --all",
+]
