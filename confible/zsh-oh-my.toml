@@ -1,0 +1,17 @@
+id = "oh-my-zsh"
+
+[[commands]]
+exec = [
+    "rm -rf ~/.oh-my-zsh", # make it idempotent
+    'KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"',
+]
+
+[[config]]
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+"""
