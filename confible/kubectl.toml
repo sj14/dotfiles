@@ -7,7 +7,6 @@ exec = ["brew install kubernetes-cli"]
 path = "~/.zshrc"
 comment_symbol = "#"
 append = """
-autoload -U +X compinit && compinit
 source <(kubectl completion zsh)
 """
 
