@@ -9,3 +9,8 @@ comment_symbol = "#"
 append = """
 source <(kubectl completion zsh)
 """
+
+# problem when opening the terminal: "/dev/fd/12:2: command not found: compdef"
+# reason: required zsh stuff might not have been loaded first (order of configs!)
+# either, put the kubectl config lower in the .zshrc file or add:
+# autoload -U +X compinit && compinit
