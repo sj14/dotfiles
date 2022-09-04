@@ -3,5 +3,14 @@ id = "fzf"
 [[commands]]
 exec = [
     "brew install fzf",
-    "/usr/local/opt/fzf/install --all",
+    "/usr/local/opt/fzf/install",
 ]
+
+# fzf script fails to update the correct .zshrc when run e.g. in a vs code terminal, e.g.
+# "Update /var/folders/c2/c287hy7d1n17sjlxsn7ctph00000gn/T/vscode-zsh/.zshrc"
+[[config]]
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+"""
