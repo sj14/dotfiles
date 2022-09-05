@@ -1,4 +1,6 @@
+[settings]
 id = "kubectl"
+priority = 1010
 
 [[commands]]
 exec = ["brew install kubernetes-cli"]

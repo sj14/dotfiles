@@ -1,3 +1,4 @@
+[settings]
 id = "direnv"
 
 [[commands]]

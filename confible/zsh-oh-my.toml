@@ -1,4 +1,6 @@
+[settings]
 id = "oh-my-zsh"
+priority = 20
 
 [[commands]]
 exec = [
