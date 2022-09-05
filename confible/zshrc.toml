@@ -1,4 +1,5 @@
 id = "zshrc"
+priority = 10
 
 [[config]]
 path = "~/.zshrc"
