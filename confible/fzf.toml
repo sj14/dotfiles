@@ -4,7 +4,8 @@ id = "fzf"
 [[commands]]
 exec = [
     "brew install fzf",
-    "/usr/local/opt/fzf/install",
+    "[ -f /usr/local/opt/fzf/install ]    && /usr/local/opt/fzf/install --no-update-rc;    exit 0",    # depending on the homebrew installation it's either one ...
+    "[ -f /opt/homebrew/opt/fzf/install ] && /opt/homebrew/opt/fzf/install --no-update-rc; exit 0",    # ... or the other
 ]
 
 # fzf script fails to update the correct .zshrc when run e.g. in a vs code terminal, e.g.

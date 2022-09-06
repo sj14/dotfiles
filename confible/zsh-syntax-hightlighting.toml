@@ -10,5 +10,7 @@ exec = [
 path = "~/.zshrc"
 comment_symbol = "#"
 append = """
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# depending on the homebrew installation, it's either one or the other
+[ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 """
