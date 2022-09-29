@@ -12,7 +12,8 @@ brew install \
     menumeters \
     rectangle \
     mouse-fix \
-    shellcheck
+    shellcheck \
+    trex
 """]
 # dteoh-devdocs
 # gpg-suite-no-mail
