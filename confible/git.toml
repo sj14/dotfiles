@@ -23,6 +23,7 @@ append = """
 	enabled = true
 [rebase]
 	autoStash = true
+	updateRefs = true
 [pull]
 	rebase = false
 [init]
