@@ -3,7 +3,8 @@ id = "macos"
 
 # apps
 [[commands]]
-exec = ["""
+exec = [
+    """
 brew install \
     iterm2 \
     maccy \
@@ -14,7 +15,8 @@ brew install \
     mouse-fix \
     shellcheck \
     trex
-"""]
+""",
+]
 # dteoh-devdocs
 # gpg-suite-no-mail
 # background-music 
@@ -23,5 +25,7 @@ brew install \
 
 # settings
 [[commands]]
-exec = ["defaults write com.apple.Dock autohide-delay -float 0", "killall Dock"]
-# (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)
+exec = [
+    "defaults write com.apple.Dock autohide-delay -float 0 && killall Dock", # (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)
+    "sudo pmset -a womp 0",                                                  # Disable wake-on-lan
+]
