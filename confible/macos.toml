@@ -26,6 +26,6 @@ brew install \
 # settings
 [[commands]]
 exec = [
-    "defaults write com.apple.Dock autohide-delay -float 0 && killall Dock", # (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)
-    "echo 'password for pmset' && sudo pmset -a womp 0",                                                  # Disable wake-on-lan
+    # (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)
+    "defaults write com.apple.Dock autohide-delay -float 0 && killall Dock", 
 ]
