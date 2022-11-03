@@ -17,4 +17,8 @@ path = "~/.config/helix/config.toml"
 comment_symbol = "#"
 append = """
 theme = "ayu_mirage"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
 """
