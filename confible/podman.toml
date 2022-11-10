@@ -1,0 +1,19 @@
+[settings]
+id = "podman"
+
+[[commands]]
+exec = ["brew install podman-desktop"]
+
+# Create adjusted default machine when desired, e.g.
+#   podman machine rm
+#   podman machine init --disk-size 30 --cpus 2 --memory 4096
+
+# Adjust disk/cpu/memory (disk can only grow)
+#   podman machine set --disk-size 30 --cpus 2 --memory 4096
+
+[[config]]
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+export KIND_EXPERIMENTAL_PROVIDER=podman
+"""
