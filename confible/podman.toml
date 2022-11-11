@@ -2,7 +2,26 @@
 id = "podman"
 
 [[commands]]
-exec = ["brew install podman-desktop"]
+exec = [
+"brew install podman-desktop",
+
+# TODO: add privileged (sudo) mode to confible configs.
+# As an alternative to an alias which also works in Makefiles etc.
+"""
+cat << "EOF" | sudo tee -a /usr/local/bin/docker
+#!/usr/bin/env bash
+set -euo pipefail
+
+RED='\\033[0;31m'
+NO_COLOR='\\033[0m'
+
+echo -e "${RED}WARNING: using podman${NO_COLOR}" 
+podman "$@"
+EOF
+""",
+
+"sudo chmod +x /usr/local/bin/docker",
+]
 
 # Create adjusted default machine when desired, e.g.
 #   podman machine rm
