@@ -8,7 +8,7 @@ exec = [
 # TODO: add privileged (sudo) mode to confible configs.
 # As an alternative to an alias which also works in Makefiles etc.
 """
-cat << "EOF" | sudo tee -a /usr/local/bin/docker
+cat << "EOF" | sudo tee /usr/local/bin/docker
 #!/usr/bin/env bash
 set -euo pipefail
 
