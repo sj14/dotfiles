@@ -3,26 +3,7 @@ id = "podman"
 
 [[commands]]
 exec = [
-"brew install podman-desktop",
-
-# TODO: add privileged (sudo) mode to confible configs.
-# As an alternative to an alias which also works in Makefiles etc.
-# When I decide this is overkill and the red warning is not needed,
-# create a symbolic link instead: ln -s /usr/local/bin/podman /usr/local/bin/docker
-"""
-cat << "EOF" | sudo tee /usr/local/bin/docker
-#!/usr/bin/env bash
-set -euo pipefail
-
-RED='\\033[0;31m'
-NO_COLOR='\\033[0m'
-
-echo -e "${RED}WARNING: using podman${NO_COLOR}" 
-podman "$@"
-EOF
-""",
-
-"sudo chmod +x /usr/local/bin/docker",
+    "brew install podman-desktop",
 ]
 
 # Create adjusted default machine when desired, e.g.
@@ -38,3 +19,26 @@ comment_symbol = "#"
 append = """
 export KIND_EXPERIMENTAL_PROVIDER=podman
 """
+
+# As an alternative to an alias which also works in Makefiles etc.
+# When I decide this is overkill and the red warning is not needed,
+# create a symbolic link instead, e.g: ln -s /usr/local/bin/podman /usr/local/bin/docker
+[[config]]
+path = "~/bin/docker"
+comment_symbol = "#"
+append = """
+#!/usr/bin/env bash
+set -euo pipefail
+
+RED='\\033[0;31m'
+NO_COLOR='\\033[0m'
+
+echo -e "${RED}WARNING: using podman${NO_COLOR}" 
+podman "$@"
+"""
+
+[[commands]]
+after_configs = true
+exec = [
+    "set -x; chmod +x ~/bin/docker",
+]

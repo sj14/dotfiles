@@ -22,11 +22,8 @@ setopt BANG_HIST                 # Treat the '!' character specially during expa
 # commands that start with a space are not saved in the history
 HISTCONTROL=ignorespace
 
-# GOBIN in .zshrc
-export PATH=$PATH:/$HOME/go/bin
-
-# Homebrew Binaries etc
-export PATH=$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
+# Binaries for Go, Homebrew, etc.
+export PATH=$HOME/go/bin:$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 
 # add time
 PROMPT='%{$fg[yellow]%} %D{%H:%M} '$PROMPT
