@@ -24,7 +24,8 @@ export KIND_EXPERIMENTAL_PROVIDER=podman
 # When I decide this is overkill and the red warning is not needed,
 # create a symbolic link instead, e.g: ln -s /usr/local/bin/podman /usr/local/bin/docker
 [[config]]
-path = "~/bin/docker"
+path = "~/.local/bin/docker"
+perm_file = 0o744
 comment_symbol = "#"
 append = """
 #!/usr/bin/env bash
@@ -36,9 +37,3 @@ NO_COLOR='\\033[0m'
 echo -e "${RED}WARNING: using podman${NO_COLOR}" 
 podman "$@"
 """
-
-[[commands]]
-after_configs = true
-exec = [
-    "set -x; chmod +x ~/bin/docker",
-]

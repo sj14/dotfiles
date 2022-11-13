@@ -23,7 +23,7 @@ setopt BANG_HIST                 # Treat the '!' character specially during expa
 HISTCONTROL=ignorespace
 
 # Binaries for Go, Homebrew, etc.
-export PATH=$HOME/go/bin:$HOME/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/go/bin:$HOME/.local/bin:/usr/local/bin:/opt/homebrew/bin:$PATH
 
 # add time
 PROMPT='%{$fg[yellow]%} %D{%H:%M} '$PROMPT
