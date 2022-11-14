@@ -1,11 +1,11 @@
 [settings]
 id = "kubectl"
-priority = 1010
 
 [[commands]]
 exec = ["brew install kubernetes-cli"]
 
 [[config]]
+priority = 1010
 path = "~/.zshrc"
 comment_symbol = "#"
 append = """

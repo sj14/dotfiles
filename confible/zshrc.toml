@@ -1,8 +1,8 @@
 [settings]
 id = "zshrc"
-priority = 10
 
 [[config]]
+priority = 10
 path = "~/.zshrc"
 comment_symbol = "#"
 append = """

@@ -1,6 +1,5 @@
 [settings]
 id = "oh-my-zsh"
-priority = 20
 
 [[commands]]
 exec = [
@@ -9,6 +8,7 @@ exec = [
 ]
 
 [[config]]
+priority = 20
 path = "~/.zshrc"
 comment_symbol = "#"
 append = """
