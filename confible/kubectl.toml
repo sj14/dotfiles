@@ -2,6 +2,7 @@
 id = "kubectl"
 
 [[commands]]
+os = ["darwin"]
 exec = ["brew install kubernetes-cli"]
 
 [[config]]

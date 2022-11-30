@@ -2,6 +2,7 @@
 id = "zsh-syntax-highlighting"
 
 [[commands]]
+os = ["darwin"]
 exec = [
     "brew install zsh-syntax-highlighting",
 ]

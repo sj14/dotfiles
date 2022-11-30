@@ -1,7 +1,9 @@
 [settings]
 id = "helix"
+deactivated = true
 
 [[commands]]
+os = ["darwin"]
 exec = ["brew install helix"]
 
 [[config]]

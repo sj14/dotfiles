@@ -2,6 +2,7 @@
 id = "fzf"
 
 [[commands]]
+os = ["darwin"]
 exec = [
     "brew install fzf",
     "[ -f /usr/local/opt/fzf/install ]    && /usr/local/opt/fzf/install --no-update-rc;    exit 0",    # depending on the homebrew installation it's either one ...

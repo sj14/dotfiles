@@ -2,6 +2,7 @@
 id = "podman"
 
 [[commands]]
+os = ["darwin"]
 exec = [
     "brew install podman-desktop",
 ]
@@ -24,6 +25,7 @@ export KIND_EXPERIMENTAL_PROVIDER=podman
 # When I decide this is overkill and the red warning is not needed,
 # create a symbolic link instead, e.g: ln -s /usr/local/bin/podman /usr/local/bin/docker
 [[config]]
+truncate = true
 path = "~/.local/bin/docker"
 perm_file = 0o744
 comment_symbol = "#"

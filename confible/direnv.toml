@@ -2,6 +2,7 @@
 id = "direnv"
 
 [[commands]]
+os = ["darwin"]
 exec = ["brew install direnv"]
 
 [[config]]
