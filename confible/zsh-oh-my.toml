@@ -1,5 +1,6 @@
 [settings]
 id = "oh-my-zsh"
+deactivated = false
 
 [[commands]]
 exec = [

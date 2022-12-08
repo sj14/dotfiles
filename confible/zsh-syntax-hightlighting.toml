@@ -1,5 +1,6 @@
 [settings]
 id = "zsh-syntax-highlighting"
+deactivated = false
 
 [[commands]]
 os = ["darwin"]
