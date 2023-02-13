@@ -16,6 +16,9 @@ exec = [
 # Adjust disk/cpu/memory (disk can only grow)
 #   podman machine set --disk-size 30 --cpus 2 --memory 4096
 
+# When you need privileged containers:
+#   podman machine set --rootful
+
 [[config]]
 path = "~/.zshrc"
 comment_symbol = "#"
