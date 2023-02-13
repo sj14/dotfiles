@@ -5,6 +5,7 @@ id = "podman"
 os = ["darwin"]
 exec = [
     "brew install podman-desktop",
+    "sudo podman-mac-helper install",
 ]
 
 # Create adjusted default machine when desired, e.g.
@@ -19,6 +20,7 @@ path = "~/.zshrc"
 comment_symbol = "#"
 append = """
 export KIND_EXPERIMENTAL_PROVIDER=podman
+export DOCKER_HOST=unix:///{{.Env.HOME}}/.local/share/containers/podman/machine/podman.sock
 """
 
 # As an alternative to an alias which also works in Makefiles etc.
