@@ -8,6 +8,11 @@ exec = [
     "sudo podman-mac-helper install",
 ]
 
+# Alternative to
+#   kind load docker-image IMAGE_NAME
+#   -->
+#   kind load image-archive <(podman save IMAGE_NAME)
+
 # Create adjusted default machine when desired, e.g.
 #   podman machine rm
 #   podman machine init --disk-size 30 --cpus 2 --memory 4096
@@ -26,18 +31,18 @@ export DOCKER_HOST=unix:///{{.Env.HOME}}/.local/share/containers/podman/machine/
 # As an alternative to an alias which also works in Makefiles etc.
 # When I decide this is overkill and the red warning is not needed,
 # create a symbolic link instead, e.g: ln -s /usr/local/bin/podman /usr/local/bin/docker
-[[config]]
-truncate = true
-path = "~/.local/bin/docker"
-perm_file = 0o744
-comment_symbol = "#"
-append = """
-#!/usr/bin/env bash
-set -euo pipefail
+# [[config]]
+# truncate = true
+# path = "~/.local/bin/docker"
+# perm_file = 0o744
+# comment_symbol = "#"
+# append = """
+# #!/usr/bin/env bash
+# set -euo pipefail
 
-RED='\\033[0;31m'
-NO_COLOR='\\033[0m'
+# RED='\\033[0;31m'
+# NO_COLOR='\\033[0m'
 
-echo -e "${RED}WARNING: using podman${NO_COLOR}" 
-podman "$@"
-"""
+# echo -e "${RED}WARNING: using podman${NO_COLOR}" 
+# podman "$@"
+# """
