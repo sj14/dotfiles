@@ -1,5 +1,6 @@
 [settings]
 id = "podman"
+deactivated = true
 
 [[commands]]
 os = ["darwin"]
