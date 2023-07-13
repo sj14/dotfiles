@@ -26,6 +26,9 @@ append = """
 	updateRefs = true
 [pull]
 	rebase = false
+[push]
+	autoSetupRemote = true
+	default = current
 [init]
 	defaultBranch = main
 [gpg]
