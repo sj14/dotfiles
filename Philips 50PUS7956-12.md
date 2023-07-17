@@ -9,10 +9,10 @@ Wandfarbe hinter dem Fernseher: Anthrazit
 
 ## Bild
 
-Beleuchtungsstärke: 65  
+Beleuchtungsstärke: 85  
 Schwarzwert: 50  
 Kontrast: 100  
-Sättigung: 55  
+Sättigung: 70  
 Farbton: 0  
 Schärfe: 10  
 
@@ -29,7 +29,7 @@ Korrektur des Weißabgleichts: Deaktiviert
 
 DNR: Mittel  
 MPEG-Rauschunterdrückung: Mittel  
-Adaptive Luma-Steuerung: Aus  
+Adaptive Luma-Steuerung: Niedrig  
 Lokalen Kontrast einstellen: Aus  
 PC-Modus: Aus  
 Automatischer HDMI-Spielmodus: An  
