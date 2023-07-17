@@ -4,7 +4,7 @@
 
 Ambilight-Stil: Sport  
 Helligkeit: 10  
-Sättigung: -2  
+Sättigung: -1  
 Wandfarbe hinter dem Fernseher: Anthrazit  
 
 ## Bild
