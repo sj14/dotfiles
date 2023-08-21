@@ -1,0 +1,31 @@
+[settings]
+id = "vscodium"
+
+[[config]]
+path = "~/Library/Application Support/VSCodium/User/settings.json"
+comment_symbol = "//"
+append = """
+{
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "never",
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    // "go.goroot": "~/.gvm/gos/go1.21",
+    "go.testExplorer.packageDisplayMode": "nested",
+    "go.testTimeout": "1m",
+    "go.testFlags": [
+        "-count=1", // don't cache test results
+        "-v",
+        "-race"
+    ],
+    "go.toolsManagement.autoUpdate": true,
+    "gopls": {
+        // "formatting.local": "<ADJUST ME>"
+    },
+    "terminal.integrated.scrollback": 10000,
+    "window.zoomLevel": 1,
+    "workbench.startupEditor": "none"
+}
+"""
