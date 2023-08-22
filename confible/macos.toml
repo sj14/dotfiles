@@ -30,3 +30,11 @@ exec = [
     # (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)
     "defaults write com.apple.Dock autohide-delay -float 0 && killall Dock", 
 ]
+
+[[config]]
+path = "~/.zshrc"
+comment_symbol = "#"
+append = """
+HOMEBREW_BUNDLE_FILE=~/Brewfile
+"""
+
