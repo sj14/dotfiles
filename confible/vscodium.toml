@@ -24,8 +24,13 @@ append = """
     "gopls": {
         // "formatting.local": "<ADJUST ME>"
     },
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.parameterNames": true,
+    "editor.inlayHints.padding": true,
+    "editor.inlayHints.fontFamily": "courier new",
     "terminal.integrated.scrollback": 10000,
     "window.zoomLevel": 1,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "redhat.telemetry.enabled": false
 }
 """
