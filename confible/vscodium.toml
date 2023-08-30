@@ -8,6 +8,7 @@ append = """
 {
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "git.enableSmartCommit": true,
     "git.openRepositoryInParentFolders": "never",
     "git.autofetch": true,
