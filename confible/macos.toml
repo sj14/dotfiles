@@ -13,7 +13,7 @@ brew install \
     iina \
     menumeters \
     rectangle \
-    mouse-fix \
+    mac-mouse-fix \
     shellcheck \
     trex
 """,
