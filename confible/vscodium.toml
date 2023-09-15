@@ -30,8 +30,12 @@ append = """
     "editor.inlayHints.padding": true,
     "editor.inlayHints.fontFamily": "courier new",
     "terminal.integrated.scrollback": 10000,
+    "redhat.telemetry.enabled": false,
     "window.zoomLevel": 1,
-    "workbench.startupEditor": "none",
-    "redhat.telemetry.enabled": false
+    "workbench.colorCustomizations": {
+        "editorError.foreground": "#ff000000", // disable red underline
+        "editorError.background": "#ff0000a0", // enable red background
+    },
+    "workbench.startupEditor": "none"
 }
 """
