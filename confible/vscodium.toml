@@ -1,8 +1,14 @@
 [settings]
 id = "vscodium"
 
+[[variables]]
+input = [
+    { var = "gopls_goimports_local", prompt = "goimports -local" },
+]
+
 [[config]]
 path = "~/Library/Application Support/VSCodium/User/settings.json"
+truncate = true # the config file starts and ends with curly braces, we can't get our config in between right now
 comment_symbol = "//"
 append = """
 {
@@ -13,6 +19,7 @@ append = """
     "git.openRepositoryInParentFolders": "never",
     "git.autofetch": true,
     "git.confirmSync": false,
+    "github.gitProtocol": "ssh",
     // "go.goroot": "~/.gvm/gos/go1.21",
     "go.testExplorer.packageDisplayMode": "nested",
     "go.testTimeout": "1m",
@@ -23,16 +30,19 @@ append = """
     ],
     "go.toolsManagement.autoUpdate": true,
     "gopls": {
-        // "formatting.local": "<ADJUST ME>"
+        "formatting.gofumpt": true,
+        "formatting.local": "{{ .Var.gopls_goimports_local }}",
     },
     "go.inlayHints.compositeLiteralFields": true,
     "go.inlayHints.parameterNames": true,
     "editor.inlayHints.padding": true,
     "editor.inlayHints.fontFamily": "courier new",
+    "editor.renderLineHighlight": "all",
     "terminal.integrated.scrollback": 10000,
     "redhat.telemetry.enabled": false,
     "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground": "#333333a0",
         "editorError.foreground": "#ff000000", // disable red underline
         "editorError.background": "#ff0000a0", // enable red background
     },
