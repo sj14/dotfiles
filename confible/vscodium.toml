@@ -30,7 +30,7 @@ append = """
     ],
     "go.toolsManagement.autoUpdate": true,
     "gopls": {
-        "formatting.gofumpt": true,
+        // "formatting.gofumpt": true,
         "formatting.local": "{{ .Var.gopls_goimports_local }}",
     },
     "go.inlayHints.compositeLiteralFields": true,
