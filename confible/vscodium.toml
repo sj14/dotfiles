@@ -3,7 +3,8 @@ id = "vscodium"
 
 [[variables]]
 input = [
-    { var = "gopls_goimports_local", prompt = "goimports -local" },
+    { var = "GOIMPORTS_LOCAL", prompt = "goimports -local (optional)" },
+    { var = "GOROOT", prompt = "Go root dir (optional)" },
 ]
 
 [[config]]
@@ -20,7 +21,7 @@ append = """
     "git.autofetch": true,
     "git.confirmSync": false,
     "github.gitProtocol": "ssh",
-    // "go.goroot": "~/.gvm/gos/go1.21",
+    "go.goroot": "{{ .Var.GOROOT }}",
     "go.testExplorer.packageDisplayMode": "nested",
     "go.testTimeout": "1m",
     "go.testFlags": [
@@ -31,7 +32,7 @@ append = """
     "go.toolsManagement.autoUpdate": true,
     "gopls": {
         // "formatting.gofumpt": true,
-        "formatting.local": "{{ .Var.gopls_goimports_local }}",
+        "formatting.local": "{{ .Var.GOIMPORTS_LOCAL }}",
     },
     "go.inlayHints.compositeLiteralFields": true,
     "go.inlayHints.parameterNames": true,
