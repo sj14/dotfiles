@@ -20,7 +20,7 @@ append = """
 [merge]
 	conflictstyle = diff3
 [rerere]
-	enabled = true
+	enabled = false
 [rebase]
 	autoStash = true
 	updateRefs = true
