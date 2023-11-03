@@ -42,6 +42,7 @@ append = """
     "terminal.integrated.scrollback": 10000,
     "redhat.telemetry.enabled": false,
     "window.zoomLevel": 1,
+    "workbench.activityBar.location": "top",
     "workbench.colorCustomizations": {
         "editor.lineHighlightBackground": "#333333a0",
         "editorError.foreground": "#ff000000", // disable red underline
