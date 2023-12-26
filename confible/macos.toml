@@ -13,7 +13,7 @@ brew install \
     iina \
     menumeters \
     rectangle \
-    mac-mouse-fix \
+    sanesidebuttons \
     shellcheck \
     trex
 """,
@@ -21,8 +21,9 @@ brew install \
 # dteoh-devdocs
 # gpg-suite-no-mail
 # background-music 
-# sensiblesidebuttons
 # numi
+# sensiblesidebuttons # abandoned
+# mac-mouse-fix       # became proprietary
 
 # settings
 [[commands]]
