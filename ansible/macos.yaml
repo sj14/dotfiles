@@ -1,0 +1,32 @@
+- name: macos
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install brews
+      community.general.homebrew:
+        name:
+          - shellcheck
+        state: present
+    - name: install casks
+      community.general.homebrew_cask:
+        name: 
+          - iterm2
+          - maccy
+          - macpass
+          - iina
+          - menumeters
+          - rectangle
+          - sanesidebuttons
+          - trex
+          # dteoh-devdocs
+          # gpg-suite-no-mail
+          # background-music 
+          # numi
+          # sensiblesidebuttons # abandoned
+          # mac-mouse-fix       # became proprietary
+        state: present
+    - name: dock no delay
+      ansible.builtin.shell:
+        cmd: |
+          defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+        # (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)

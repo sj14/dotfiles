@@ -1,0 +1,16 @@
+- name: direnv
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install direnv
+      community.general.homebrew:
+        name: direnv
+        state: present
+    - name: setup direnv
+      ansible.builtin.blockinfile:
+        path: ~/.zshrc
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          eval "$(direnv hook zsh)"

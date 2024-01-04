@@ -1,0 +1,29 @@
+- name: zshrc
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: setup zshrc
+      ansible.builtin.blockinfile:
+        path: ~/.zshrc
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          setopt EXTENDED_HISTORY
+          setopt HIST_EXPIRE_DUPS_FIRST
+          setopt HIST_IGNORE_DUPS
+          setopt HIST_IGNORE_ALL_DUPS
+          setopt HIST_IGNORE_SPACE
+          setopt HIST_FIND_NO_DUPS
+          setopt HIST_SAVE_NO_DUPS
+          setopt HIST_BEEP
+          setopt SHARE_HISTORY             # Share history between all sessions.
+          setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+          setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+          setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+
+          # commands that start with a space are not saved in the history
+          HISTCONTROL=ignorespace
+
+          # Binaries for Go, Homebrew, etc.
+          export PATH=$HOME/go/bin:$HOME/.local/bin:/usr/local/bin:/opt/homebrew/bin:$PATH

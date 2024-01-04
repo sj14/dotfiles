@@ -1,0 +1,18 @@
+- name: zsh-syntax-highlighting
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install zsh-syntax-highlighting
+      community.general.homebrew:
+        name: zsh-syntax-highlighting
+        state: present
+    - name: setup zsh-syntax-highlighting
+      ansible.builtin.blockinfile:
+        path: ~/.zshrc
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          # depending on the homebrew installation, it's either one or the other
+          [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+          [ -f /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

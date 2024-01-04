@@ -1,0 +1,54 @@
+- name: git
+  hosts: localhost
+  connection: local
+  vars_prompt:
+    - name: "ssh_pub_key_path"
+      prompt: "Path to your public SSH key as shown in Secretive"
+      private: false
+    - name: "email"
+      prompt: "Email to use for git commits (e.g. work or personal address)"
+      private: false
+  tasks:
+    - name: setup git
+      ansible.builtin.blockinfile:
+        path: ~/.gitconfig
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          [user]
+            name = Simon Jürgensmeyer
+            email = {{ email }}
+            signingKey = {{ ssh_pub_key_path }}
+          [commit]
+            gpgSign = true
+          [merge]
+            conflictstyle = diff3
+          [rerere]
+            enabled = false
+          [rebase]
+            autoStash = true
+            updateRefs = true
+          [pull]
+            rebase = false
+          [push]
+            autoSetupRemote = true
+            default = current
+          [init]
+            defaultBranch = main
+          [gpg]
+            format = ssh
+          [tag]
+            gpgSign = true
+
+          [url "ssh://git@github.com/"]
+            insteadOf = https://github.com/
+    - name: setup gitignore
+      ansible.builtin.blockinfile:
+        path: ~/.config/git/ignore
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          .DS_Store
+          .vscode/

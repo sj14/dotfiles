@@ -1,0 +1,21 @@
+- name: fzf
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install fzf
+      community.general.homebrew:
+        name: fzf
+        state: present
+    - name: install fzf part 2
+      ansible.builtin.shell:
+        cmd: |
+          [ -f /usr/local/opt/fzf/install ]    && /usr/local/opt/fzf/install    --no-update-rc; exit 0    # depending on the homebrew installation it's either one ...
+          [ -f /opt/homebrew/opt/fzf/install ] && /opt/homebrew/opt/fzf/install --no-update-rc; exit 0    # ... or the other
+    - name: setup fzf
+      ansible.builtin.blockinfile:
+        path: ~/.zshrc
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

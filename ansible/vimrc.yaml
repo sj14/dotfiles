@@ -1,0 +1,16 @@
+- name: vimrc
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: setup vimrc
+      ansible.builtin.blockinfile:
+        path: ~/.vimrc
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        marker: "\" {mark} ANSIBLE MANAGED BLOCK"
+        block: |
+          syntax on
+          filetype indent plugin on
+          set ruler
+          set ignorecase

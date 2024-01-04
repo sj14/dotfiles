@@ -1,0 +1,20 @@
+- name: zsh-oh-my
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install zsh-oh-my
+      ansible.builtin.shell:
+        cmd: |
+          rm -rf ~/.oh-my-zsh # make it idempotent
+          KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    - name: setup zsh-oh-my
+      ansible.builtin.blockinfile:
+        path: ~/.zshrc
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          export ZSH="$HOME/.oh-my-zsh"
+          ZSH_THEME="robbyrussell"
+          plugins=(git)
+          source $ZSH/oh-my-zsh.sh

@@ -1,0 +1,54 @@
+- name: vscodium
+  hosts: localhost
+  connection: local
+  vars_prompt:
+    - name: "GOIMPORTS_LOCAL"
+      prompt: "goimports -local (optional)"
+      private: false
+    - name: "GOROOT"
+      prompt: "Go root dir (optional)"
+      private: false
+  tasks:
+    - name: setup vscodium
+      ansible.builtin.copy:
+        dest: ~/Library/Application Support/VSCodium/User/settings.json
+        content: |
+          {
+              "files.insertFinalNewline": true,
+              "files.trimFinalNewlines": true,
+              "diffEditor.ignoreTrimWhitespace": false,
+              "git.enableSmartCommit": true,
+              "git.openRepositoryInParentFolders": "never",
+              "git.autofetch": true,
+              "git.confirmSync": false,
+              "github.gitProtocol": "ssh",
+              // "go.goroot": "{{ GOROOT }}",
+              "go.testExplorer.packageDisplayMode": "nested",
+              "go.testTimeout": "1m",
+              "go.testFlags": [
+                  "-count=1", // don't cache test results
+                  "-v",
+                  "-race"
+              ],
+              "go.toolsManagement.autoUpdate": true,
+              "gopls": {
+                  // "formatting.gofumpt": true,
+                  // "formatting.local": "{{ GOIMPORTS_LOCAL }}",
+              },
+              "go.inlayHints.compositeLiteralFields": true,
+              "go.inlayHints.parameterNames": true,
+              "editor.inlayHints.padding": true,
+              "editor.inlayHints.fontFamily": "courier new",
+              "editor.renderLineHighlight": "all",
+              "terminal.integrated.scrollback": 10000,
+              "redhat.telemetry.enabled": false,
+              "window.zoomLevel": 1,
+              "workbench.colorCustomizations": {
+                  "editor.lineHighlightBackground": "#333333a0",
+                  "editorError.foreground": "#ff000000", // disable red underline
+                  "editorError.background": "#ff0000a0", // enable red background
+              },
+              "workbench.startupEditor": "none",
+              "workbench.activityBar.location": "top",
+              "security.workspace.trust.untrustedFiles": "open",
+          }

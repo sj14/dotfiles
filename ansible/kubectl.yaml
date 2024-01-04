@@ -1,0 +1,21 @@
+- name: kubectl
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: install kubectl
+      community.general.homebrew:
+        name: kubernetes-cli
+        state: present
+    - name: setup kubectl
+      ansible.builtin.blockinfile:
+        path: ~/.zshrc
+        append_newline: true
+        prepend_newline: true
+        marker_begin: BEGIN {{ ansible_play_name }}
+        block: |
+          source <(kubectl completion zsh)
+
+# problem when opening the terminal: "/dev/fd/12:2: command not found: compdef"
+# reason: required zsh stuff might not have been loaded first (order of configs!)
+# either, put the kubectl config lower in the .zshrc file or add:
+# autoload -U +X compinit && compinit
