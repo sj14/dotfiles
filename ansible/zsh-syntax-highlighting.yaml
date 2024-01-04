@@ -12,6 +12,7 @@
         append_newline: true
         prepend_newline: true
         marker_begin: BEGIN {{ ansible_play_name }}
+        marker_end: END {{ ansible_play_name }}
         block: |
           # depending on the homebrew installation, it's either one or the other
           [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

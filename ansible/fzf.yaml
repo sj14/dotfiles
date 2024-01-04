@@ -17,5 +17,6 @@
         append_newline: true
         prepend_newline: true
         marker_begin: BEGIN {{ ansible_play_name }}
+        marker_end: END {{ ansible_play_name }}
         block: |
           [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

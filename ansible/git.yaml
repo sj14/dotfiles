@@ -15,6 +15,7 @@
         append_newline: true
         prepend_newline: true
         marker_begin: BEGIN {{ ansible_play_name }}
+        marker_end: END {{ ansible_play_name }}
         block: |
           [user]
             name = Simon Jürgensmeyer
@@ -49,6 +50,7 @@
         append_newline: true
         prepend_newline: true
         marker_begin: BEGIN {{ ansible_play_name }}
+        marker_end: END {{ ansible_play_name }}
         block: |
           .DS_Store
           .vscode/
