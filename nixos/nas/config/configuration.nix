@@ -17,6 +17,7 @@
       ./cron.nix
       ./power.nix
       ./nix.nix
+#      ./syncthing.nix
     ];
 
   # Bootloader.
