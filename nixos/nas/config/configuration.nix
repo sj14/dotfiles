@@ -16,6 +16,7 @@
       ./btrfs.nix
       ./cron.nix
       ./power.nix
+      ./nix.nix
     ];
 
   # Bootloader.
@@ -59,10 +60,7 @@
   ];
 
   # Enable the OpenSSH daemon.
-   services.openssh.enable = true;
-
-  # Storage optimization
-  nix.optimise.automatic = true;
+  services.openssh.enable = true;
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
