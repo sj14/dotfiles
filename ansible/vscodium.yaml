@@ -12,6 +12,7 @@
     - name: setup vscodium
       ansible.builtin.copy:
         dest: ~/Library/Application Support/VSCodium/User/settings.json
+        backup: true
         content: |
           {
               "files.insertFinalNewline": true,
@@ -33,7 +34,7 @@
               "go.toolsManagement.autoUpdate": true,
               "gopls": {
                   // "formatting.gofumpt": true,
-                  // "formatting.local": "{{ GOIMPORTS_LOCAL }}",
+                  "formatting.local": "{{ GOIMPORTS_LOCAL }}",
               },
               "go.inlayHints.compositeLiteralFields": true,
               "go.inlayHints.parameterNames": true,
@@ -47,6 +48,7 @@
                   "editor.lineHighlightBackground": "#333333a0",
                   "editorError.foreground": "#ff000000", // disable red underline
                   "editorError.background": "#ff0000a0", // enable red background
+                  "tab.activeBorder": "#ffffff",
               },
               "workbench.startupEditor": "none",
               "workbench.activityBar.location": "top",
