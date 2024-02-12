@@ -27,6 +27,13 @@
         state: present
     - name: dock no delay
       ansible.builtin.shell:
-        cmd: |
-          defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
+        cmd: defaults write com.apple.Dock autohide-delay -float 0 && killall Dock
         # (enable delay again: defaults delete com.apple.Dock autohide-delay && killall Dock)
+    - name: menubar less padding
+      ansible.builtin.shell: |
+        # https://flaky.build/native-fix-for-applications-hiding-under-the-macbook-pro-notch
+        defaults -currentHost write -globalDomain NSStatusItemSelectionPadding -int 6
+        defaults -currentHost write -globalDomain NSStatusItemSpacing -int 6
+        # revert:
+        # defaults -currentHost delete -globalDomain NSStatusItemSelectionPadding
+        # defaults -currentHost delete -globalDomain NSStatusItemSpacing
