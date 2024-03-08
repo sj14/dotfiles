@@ -24,7 +24,7 @@
           [commit]
             gpgSign = true
           [fetch]
-	          prune = true
+	    prune = true
           [merge]
             conflictstyle = diff3
           [rerere]
