@@ -23,6 +23,8 @@
             signingKey = {{ ssh_pub_key_path }}
           [commit]
             gpgSign = true
+          [fetch]
+	          prune = true
           [merge]
             conflictstyle = diff3
           [rerere]
