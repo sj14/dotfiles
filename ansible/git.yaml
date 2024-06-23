@@ -43,6 +43,8 @@
             format = ssh
           [tag]
             gpgSign = true
+          [branch]
+            sort = -committerdate
 
           [url "ssh://git@github.com/"]
             insteadOf = https://github.com/
