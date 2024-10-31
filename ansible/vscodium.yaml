@@ -45,7 +45,7 @@
               "redhat.telemetry.enabled": false,
               "window.zoomLevel": 1,
               "workbench.colorCustomizations": {
-                  "editor.lineHighlightBackground": "#333333a0",
+                  "editor.lineHighlightBackground": "#3f3f3fff",
                   "editorError.foreground": "#ff000000", // disable red underline
                   "editorError.background": "#ff0000a0", // enable red background
                   "tab.activeBorder": "#ffffff",
