@@ -12,12 +12,13 @@
         name: 
           - iterm2
           - maccy
-          - macpass
           - iina
           - menumeters
-          - rectangle
           - sanesidebuttons
           - trex
+          - keepassxc
+          # - rectangle # not needed since macos 15
+          # - macpass
           # dteoh-devdocs
           # gpg-suite-no-mail
           # background-music 
