@@ -2,7 +2,7 @@
 
 ## Ambilight
 
-Ambilight-Stil: Sport  
+Ambilight-Stil: Standard  
 Helligkeit: 10  
 Sättigung: -2  
 Wandfarbe hinter dem Fernseher: Anthrazit  
@@ -10,7 +10,7 @@ Wandfarbe hinter dem Fernseher: Anthrazit
 ## Bild
 
 Beleuchtungsstärke: 85  
-Schwarzwert: 50  
+Schwarzwert: 55  
 Kontrast: 100  
 Sättigung: 70  
 Farbton: 0  
