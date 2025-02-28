@@ -17,14 +17,14 @@
         marker_begin: BEGIN {{ ansible_play_name }}
         marker_end: END {{ ansible_play_name }}
         block: |
+          # Added some settings from https://blog.gitbutler.com/how-git-core-devs-configure-git/
           [user]
             name = Simon Jürgensmeyer
             email = {{ email }}
             signingKey = {{ ssh_pub_key_path }}
           [commit]
             gpgSign = true
-          [fetch]
-            prune = true
+            verbose = true
           [merge]
             conflictstyle = diff3
           [rerere]
@@ -32,19 +32,32 @@
           [rebase]
             autoStash = true
             updateRefs = true
+            autoSquash = true
           [pull]
             rebase = false
           [push]
             autoSetupRemote = true
-            default = current
+            default = simple
           [init]
             defaultBranch = main
           [gpg]
             format = ssh
           [tag]
             gpgSign = true
+            sort = version:refname
+          [fetch]
+            prune = true
+            pruneTags = true
+            all = true
+          [column]
+            ui = auto
           [branch]
             sort = -committerdate
+          [diff]
+            algorithm = histogram
+            renames = true
+          [help]
+            autocorrect = prompt
 
           [url "ssh://git@github.com/"]
             insteadOf = https://github.com/
