@@ -19,6 +19,7 @@
               "files.trimFinalNewlines": true,
               "files.trimTrailingWhitespace": true,
               "diffEditor.ignoreTrimWhitespace": false,
+              "git.blame.editorDecoration.enabled": true,
               "git.enableSmartCommit": true,
               "git.openRepositoryInParentFolders": "never",
               "git.autofetch": true,
