@@ -9,7 +9,7 @@ Wandfarbe hinter dem Fernseher: Anthrazit
 
 ## Bild
 
-Beleuchtungsstärke: 85  
+Beleuchtungsstärke: 60  
 Schwarzwert: 55  
 Kontrast: 100  
 Sättigung: 70  
