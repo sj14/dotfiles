@@ -11,4 +11,6 @@
 - Travel assistant https://apps.kde.org/de/itinerary/
 - Wake on Lan https://github.com/Florianisme/WakeOnLan
 - "Wallet" https://github.com/ligi/PassAndroid
-- Various https://www.simplemobiletools.com/
+- Various 
+  - Fossify https://www.fossify.org/apps/
+  - Privacy Friendly Apps: https://secuso.aifb.kit.edu/105.php
